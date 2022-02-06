@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Calculator from './Calculator'
 
 
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 function App() {
-  return (
   
-<Calculator />  
+return <div className="app">
+  
+  <ClickCounter />
+  <HoverCounter />
+ 
+</div>
 
-
-
-
-  );
 }
 
 export default App;
