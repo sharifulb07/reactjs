@@ -1,41 +1,21 @@
-
-
-import ClickCounter from "./components/ClickCounter";
-import HoverCounter from "./components/HoverCounter";
-import Counter from "./components/Counter";
-
-
-
-function App() {
-  
-return (
-  <div className="app">
-
-  <Counter>
-    {(counter, incrementCount)=> (
-      <ClickCounter count={counter} incrementCount={incrementCount}>
-
-      </ClickCounter>
-    )}
-  </Counter>
-  <Counter>
-    {(counter, incrementCount)=> (
-      <HoverCounter count={counter} incrementCount={incrementCount}>
-
-      </HoverCounter>
-    )}
-  </Counter>
+import React, { Component } from 'react';
+// import Test from './components/Test';
+// import Clock from './components/Clock';
+// import Watch from './components/Watch';
+import ClockList from './components/ClockList';
 
 
 
 
 
-  </div>
 
+export default class App extends Component {
+  render() {
+    const quantities=[1,2,3];
+    return (<div>
+      
+  <ClockList quantity={quantities} />
 
-
-);
-
+    </div>);
+  }
 }
-
-export default App;
