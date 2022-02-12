@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
-// import Test from './components/Test';
-// import Clock from './components/Clock';
-// import Watch from './components/Watch';
-import ClockList from './components/ClockList';
+import Form from "./components/Form";
 
 
 
+function App(){
+  return(
+    <div>
+      <Form />
 
-
-
-export default class App extends Component {
-  render() {
-    const quantities=[1,2,3];
-    return (<div>
-      
-  <ClockList quantity={quantities} />
-
-    </div>);
-  }
+    </div>
+  )
 }
+
+
+export default App;
