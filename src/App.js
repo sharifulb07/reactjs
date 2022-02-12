@@ -1,10 +1,21 @@
-import Form from "./components/Form";
-import Calculator from "./components/Calculator";
 
-
+import Text from "./composition/Text";
+import Emoji from "./Inheritance/Emoji";
+import Bracket from "./composition/Bracket";
 
 function App(){
-  return <Calculator />;
+  return (
+  <Emoji>
+
+    {({addEmoji}) => 
+    <Bracket>
+    
+    {({addBracket})=><Text addEmoji={addEmoji} addBracket={addBracket} />}
+    
+    </Bracket> }
+
+  </Emoji>
+  );
 }
 
 
