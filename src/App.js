@@ -1,25 +1,13 @@
+import React from 'react';
+import Test from './jsx/Test';
 
-import React from 'react'
-import Form from './componentes/Form'
-// import Example from './componentes/Example';
-// import Form from './componentes/Form'
+export default function App() {
+    
 
-import Time from './componentes/Time'
+    return (
+        
+        <Test />
 
-
-
-export default class App extends React.Component{
-
-
-
-    render(){
-        return (
-            <div>
-                <Time />
-                <br />
-                <Form />
-            </div>
-        )
-    }
-
+        
+    );
 }
