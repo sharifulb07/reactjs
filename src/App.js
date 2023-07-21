@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Packing from "./components/vegetables/Packing";
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div>
+    Hello
+   
+   <Packing name={'Fulkopi'} packed={true} />
+   <Packing name={'BadhaKopi'} packed={false} />
+   <Packing name={'Hilsha'} packed={false} />
+   <Packing name={'Kalpurush'} packed={true} />
+   <Packing name={'FulkMan is mortalopi'} packed={false} />
+  </div>
+  
+  )
 }
 
 export default App;
