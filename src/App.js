@@ -1,16 +1,12 @@
 import "./App.css";
-import DrinkList from "./components/DrinkList/DrinkList";
-
-
-
-
-
+import VideoPlayer from "./components/toolbar/Toolbar";
 
 
 function App() {
   return (
   <div>
-<DrinkList />
+
+<VideoPlayer />
 
   </div>
   
