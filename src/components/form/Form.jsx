@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useImmer } from 'use-immer';
+
 
 const Form = () => {
-  const [person, setPerson] = useState({
+  const [person, setPerson] =useImmer({
     name: "Shariful Islam ",
     artwork: {
       title: "Frontend Developer ",
@@ -11,39 +13,28 @@ const Form = () => {
   });
 
   const handleNameChange=(e)=>{
-setPerson({
-    ...person,
-    name:e.target.value
-})
+setPerson(
+    draft=>{
+        draft.name=e.target.value
+    }
+)
 
   }
 
   const handleTitleChange=(e)=>{
-    setPerson({
-        ...person,
-        artwork:{
-            ...person.artwork,
-            title:e.target.value
-        }
+    setPerson(draft=>{
+        draft.artwork.title=e.target.value
     })
   }
 
   const handleCityChange=(e)=>{
-    setPerson({
-        ...person,
-        artwork:{
-            ...person.artwork,
-            city:e.target.value
-        }
+    setPerson(draft=>{
+        draft.artwork.city=e.target.value
     })
   }
   const handleImageChange=(e)=>{
-    setPerson({
-        ...person,
-        artwork:{
-            ...person.artwork,
-            image:e.target.value
-        }
+    setPerson(draft=>{
+        draft.artwork.image=e.target.value
     })
   }
 
