@@ -1,13 +1,10 @@
 import "./App.css";
-import Count from "./components/increment/Count";
-import Message from "./components/message/Message";
+import Form from "./components/form/Form";
 
 function App() {
   return (
     <div>
-      <Message />
-
-      <Count />
+      <Form />
     </div>
   );
 }
