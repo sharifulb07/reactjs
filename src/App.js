@@ -1,19 +1,12 @@
 import "./App.css";
-import ImageGallery from "./components/imageGallery/ImageGallery";
-
-
-
+import Message from "./components/message/Message";
 
 function App() {
   return (
-  <div>
-
-
-<ImageGallery />
-
-  </div>
-  
-  )
+    <div>
+      <Message />
+    </div>
+  );
 }
 
 export default App;
