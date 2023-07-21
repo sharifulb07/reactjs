@@ -1,12 +1,15 @@
 import "./App.css";
-import VideoPlayer from "./components/toolbar/Toolbar";
+import ImageGallery from "./components/imageGallery/ImageGallery";
+
+
 
 
 function App() {
   return (
   <div>
 
-<VideoPlayer />
+
+<ImageGallery />
 
   </div>
   
