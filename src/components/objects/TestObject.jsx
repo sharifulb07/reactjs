@@ -49,6 +49,35 @@ const handleIncreaseClick=(productId)=>{
     }
 }))
 }
+const handleIncreseClick=(productId)=>{
+  setProducts(products.map(product=>{
+    if(product.id===productId){
+      return {
+        ...product,
+        count:product.count+1
+      }
+    }else{
+      return product;
+    }
+}))
+}
+const handleDecreaseClick=(productId)=>{
+ const nextProducts= products.map(product=>{
+    if(product.id===productId){
+      return {
+        ...product,
+        count:product.count-1
+      }
+    }else{
+      return product;
+    }
+})
+const filteredProduct=nextProducts.filter(p=>p.count>0);
+
+setProducts(filteredProduct);
+
+
+}
 
 
 return(
@@ -60,8 +89,12 @@ return(
         (<b>{product.count}</b>)
         {' '}
         <button type='button' onClick={()=>{
-          handleIncreaseClick(product.id)
+          handleIncreseClick(product.id)
         }}>+1</button>
+        {' '}
+        <button type='button' onClick={()=>{
+          handleDecreaseClick(product.id)
+        }}>-1</button>
       </li>
     ))}
   </ul>
