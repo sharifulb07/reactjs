@@ -1,10 +1,13 @@
 import "./App.css";
-import Form from "./components/form/Form";
+import ShoppingCart from "./components/objects/TestObject";
+// import Form from "./components/form/Form";
+
+
 
 function App() {
   return (
     <div>
-      <Form />
+      <ShoppingCart />
     </div>
   );
 }
