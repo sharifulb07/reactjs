@@ -1,28 +1,33 @@
 
 import './App.css';
-
-
-import {ContextProvider} from './components/ContextProvider';
-import UserProfile from './components/UserProfile';
-
-
-
-
-
-
+import { useReducer } from 'react';
+const initialState = {count:0};
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+      case 'reset':
+        return {count:0 };
+    default:
+     return state;
+  }
+};
 
 function App() {
-
+  const [state, dispatch] = useReducer(reducer, initialState);
 
 
   return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={()=>dispatch({type:"increment"})}>Increment</button>
+      <button onClick={()=>dispatch({type:"decrement"})}>decrement</button>
+      <button onClick={()=>dispatch({type:"reset"})}>Reset</button>
+    </div>
 
 
-    <ContextProvider className='flex flex-col items-center  h-screen bg-gray-100'>
-
-     <UserProfile />
-
-    </ContextProvider>
   )
 }
 
