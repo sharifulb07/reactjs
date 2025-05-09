@@ -6,20 +6,28 @@ import Switcher from './components/Switcher';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+      const data = await response.json();
+      console.log(data);
 
-    console.log('This is a example of useEffect');
-    document.title = `You clicked ${count} times`;
-  }, [count])
+      if (data && data.length) setData(data);
+    }
+    fetchData();
+
+  }, [])
 
   return (
     <div className='flex flex-col items-center  h-screen bg-gray-100'>
-      <h2>{count}</h2>
-      <button onClick={() => setCount(count + 1)}>increament</button>
-
-
+    
+{
+  data.map((item)=>
+    <p className='text-black' key={item.id}>{item.title}</p>
+  )
+}
 
     </div>
   )
