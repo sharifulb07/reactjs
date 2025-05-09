@@ -1,31 +1,28 @@
 
 import './App.css';
-import React, { createContext } from 'react';
-import ComponentA from './components/ComponentA';
+
+
+import {ContextProvider} from './components/ContextProvider';
+import UserProfile from './components/UserProfile';
 
 
 
 
 
-export const Data = createContext();
-export const Data1 = createContext();
+
 
 function App() {
-  const name = "Shariful islam";
-  const age=36;
+
 
 
   return (
-    <Data.Provider value={name}>
-    <Data1.Provider value={age}>
 
-    <div className='flex flex-col items-center  h-screen bg-gray-100'>
 
-      <ComponentA />
+    <ContextProvider className='flex flex-col items-center  h-screen bg-gray-100'>
 
-    </div>
-    </Data1.Provider>
-    </Data.Provider>
+     <UserProfile />
+
+    </ContextProvider>
   )
 }
 
